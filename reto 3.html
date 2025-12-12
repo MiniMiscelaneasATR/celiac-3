@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recetario Sin Gluten - Pan de Molde</title>
+    <!-- Aquí están los estilos CSS para el diseño de 960px, dos columnas y lista triple -->
+    <style>
+        /*
+         * Diseño: Fijo centrado a 960px con sombras suaves
+         */
+        body {
+            background-color: #f7f3e8; /* Tono de harina de arroz */
+            font-family: Arial, sans-serif;
+            margin: 0; /* Elimina el margen predeterminado del body */
+        }
+
+        /* Contenedor principal de 960px centrado */
+        .contenedor-pagina { 
+            width: 960px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        /*
+         * Encabezado
+         */
+        h1 {
+            text-align: center;
+            color: #4CAF50; /* Verde "Sin TACC" */
+        }
+
+        /*
+         * 🍲 Sección de dos columnas: Datos de la Receta (izquierda) y Procedimiento (derecha)
+         */
+        #contenido-principal {
+            display: flex;
+            gap: 20px;
+        }
+
+        /* Columna izquierda: 260 px de ancho */
+        #sidebar {
+            width: 260px;
+            background-color: #e6ffe6;
+            padding: 10px;
+            box-sizing: border-box; /* Incluye padding en el ancho de 260px */
+        }
+
+        /* Columna derecha: El espacio restante (700 px) */
+        #main-content {
+            flex-grow: 1; /* Ocupa el espacio restante */
+        }
+        
+        /* Estilo para los títulos de la columna izquierda */
+        #sidebar h3 {
+            color: #218838;
+            border-bottom: 2px solid #4CAF50;
+            padding-bottom: 5px;
+        }
+
+        /*
+         * 📜 Lista de Ingredientes (la parte que va a tres columnas)
+         */
+        .contenido-lista {
+            column-count: 3; /* Divide el contenido en 3 columnas iguales */
+            column-gap: 30px;
+            list-style-type: '🍚 '; /* Icono de grano de arroz/cereal apto */
+            margin-top: 20px;
+            padding-left: 20px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Contenedor general fijo y centrado de 960px -->
+    <div class="contenedor-pagina"> 
+        
+        <h1>Pan de Molde Esponjoso y Rápido (Apto para Celíacos)</h1>
+        
+        <!-- Contenedor Flexbox para las dos columnas -->
+        <div id="contenido-principal">
+            
+            <!-- Columna izquierda (260px) - Datos clave de la receta -->
+            <div id="sidebar">
+                <h3>Datos de la Receta</h3>
+                <p><strong>Rendimiento:</strong> 1 Pan (1.2 kg)</p>
+                <p><strong>Tiempo de Preparación:</strong> 15 minutos</p>
+                <p><strong>Tiempo de Reposo:</strong> 60 minutos</p>
+                <p><strong>Tiempo de Horno:</strong> 50 minutos</p>
+                <p><strong>Certificación:</strong> Apto para celíacos (verificar sellos)</p>
+                
+                <h3>Equipamiento</h3>
+                <p>Batidora con gancho, molde de pan (25x10 cm), papel de hornear.</p>
+                
+                <h3>Notas Importantes</h3>
+                <p style="color: darkred; font-weight: bold;">¡Cuidado con la contaminación cruzada!</p>
+                <p style="font-size: small;">Asegúrate de que todos los utensilios y la superficie de trabajo estén limpios y libres de restos de harinas con gluten.</p>
+            </div>
+            
+            <!-- Columna derecha (700px) - Ingredientes y Procedimiento -->
+            <div id="main-content">
+                
+                <h2>Ingredientes (Todos deben ser Sin TACC)</h2>
+                
+                <!-- La lista de ingredientes en tres columnas -->
+                <ul class="contenido-lista">
+                    <li>300g de Harina de Arroz</li>
+                    <li>150g de Almidón de Maíz (Maicena)</li>
+                    <li>50g de Fécula de Tapioca</li>
+                    <li>10g de Goma Xantana (Esencial para la textura sin gluten)</li>
+                    <li>10g de Levadura Seca de Panadería (Sin gluten)</li>
+                    <li>8g de Sal</li>
+                    <li>15g de Azúcar o Miel</li>
+                    <li>400ml de Agua Tibia (37°C)</li>
+                    <li>25ml de Aceite de Oliva suave</li>
+                    <li>1 Huevo L (a temperatura ambiente)</li>
+                </ul>
+
+                <h2>Procedimiento Paso a Paso</h2>
+                <p><strong>1. Activación de la Levadura:</strong> En un bol, mezcla el agua tibia, la levadura y el azúcar. Deja reposar 10 minutos hasta que se forme una espuma (prueba de que la levadura está viva).</p>
+                <p><strong>2. Mezcla Seca:</strong> En la batidora, combina la harina de arroz, el almidón de maíz, la fécula de tapioca, la goma xantana y la sal.</p>
+                <p><strong>3. Amasado Rápido:</strong> Añade la mezcla de levadura, el aceite de oliva y el huevo a los ingredientes secos. Bate con el gancho a velocidad media durante 5 minutos. La masa será muy pegajosa (¡esto es normal en el pan sin gluten!).</p>
+                <p><strong>4. Fermentación:</strong> Vierte la masa en el molde previamente engrasado y cubierto con papel de hornear. Tapa con un paño húmedo y deja reposar en un lugar cálido (cerca de 30°C) durante 60 minutos, o hasta que duplique su tamaño.</p>
+                <p><strong>5. Horneado:</strong> Precalienta el horno a 200°C. Hornea el pan durante 50 minutos, bajando la temperatura a 180°C si se dora demasiado rápido. El pan estará listo cuando al golpearlo por abajo suene hueco.</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
