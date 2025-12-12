@@ -1,0 +1,57 @@
+/*
+ * Diseño: Fijo centrado a 960px con sombras suaves
+ */
+body {
+    background-color: #f7f3e8; /* Tono de harina de arroz */
+    font-family: Arial, sans-serif;
+}
+
+/* Asumiendo que el contenedor principal es un div directo en el body */
+body > div {
+    width: 960px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+/*
+ * Encabezado
+ */
+h1 {
+    text-align: center;
+    color: #4CAF50; /* Verde "Sin TACC" */
+}
+
+/*
+ * 🍲 Sección de dos columnas: Despensa (izquierda) y Recetario (derecha)
+ * Utiliza Flexbox para la estructura de columna
+ */
+#contenido-principal {
+    display: flex;
+    gap: 20px; /* Espacio entre las columnas */
+}
+
+/* Columna izquierda: 260 px de ancho */
+#sidebar {
+    width: 260px;
+    background-color: #e6ffe6;
+    padding: 10px;
+    box-sizing: border-box; /* Asegura que el padding se incluya en los 260px */
+}
+
+/* Columna derecha: El espacio restante (700 px) */
+#main-content {
+    flex-grow: 1; /* Ocupa el espacio restante */
+}
+
+/*
+ * 📜 Lista de Contenido del Libro / Ingredientes aptos
+ * Utiliza column-count para la división sencilla
+ */
+.contenido-lista {
+    column-count: 3; /* Divide el contenido en 3 columnas iguales */
+    column-gap: 30px;
+    list-style-type: '🍚 '; /* Icono de grano de arroz/cereal apto */
+    margin-top: 20px;
+}
